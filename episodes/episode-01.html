@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Episode 1: What Is HJR 173/174? — Too Louse Rock</title>
+  <title>Episode 1: What Is Amendment 5? — Too Louse Rock</title>
   <style>
     body {
       font-family: Georgia, serif;
@@ -58,6 +58,160 @@
       color: #444;
       font-style: italic;
     }
+    .amendment-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+    .amendment-card {
+      text-align: center;
+      padding: 1.25rem 0.5rem;
+      border: 1px solid #ddd;
+    }
+    .amendment-icon {
+      font-size: 2.5rem;
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+    .amendment-card p {
+      font-size: 0.85rem;
+      margin: 0;
+      color: #444;
+      line-height: 1.4;
+    }
+    .amendment-card {
+      cursor: pointer;
+    }
+    .amendment-card:hover {
+      background: #f9f9f9;
+    }
+    .amendment-reveal {
+      display: none;
+      grid-column: 1 / -1;
+      border-left: 3px solid #ccc;
+      padding: 0.75rem 1.25rem;
+      background: #f9f9f9;
+      font-size: 0.9rem;
+      color: #444;
+      font-style: italic;
+      margin-top: 0.25rem;
+    }
+    .amendment-reveal.open {
+      display: block;
+    }
+    .clip-strip {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      margin: 1.5rem 0;
+      flex-wrap: wrap;
+    }
+    .clip-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.3rem;
+      min-width: 60px;
+    }
+    .clip-item .clip-icon {
+      font-size: 2.25rem;
+      line-height: 1;
+    }
+    .clip-item .clip-label {
+      font-size: 0.75rem;
+      color: #777;
+      text-align: center;
+      line-height: 1.3;
+    }
+    .budget-chart {
+      margin: 1.5rem 0;
+      border: 1px solid #ddd;
+      padding: 1.25rem 1.5rem;
+      background: #fafafa;
+    }
+    .budget-chart h3 {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #777;
+      margin: 0 0 1rem 0;
+      font-weight: normal;
+    }
+    .budget-row {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 0.65rem;
+    }
+    .budget-step {
+      font-size: 0.8rem;
+      color: #aaa;
+      width: 18px;
+      flex-shrink: 0;
+      text-align: right;
+    }
+    .budget-label {
+      font-size: 0.875rem;
+      width: 140px;
+      flex-shrink: 0;
+      color: #1a1a1a;
+    }
+    .budget-bar-wrap {
+      flex: 1;
+      background: #e8e8e8;
+      height: 20px;
+      position: relative;
+    }
+    .budget-bar {
+      height: 100%;
+      background: #1a1a1a;
+    }
+    .budget-amount {
+      font-size: 0.875rem;
+      width: 55px;
+      text-align: right;
+      flex-shrink: 0;
+      color: #444;
+    }
+    .budget-total {
+      border-top: 1px solid #ccc;
+      margin-top: 0.75rem;
+      padding-top: 0.65rem;
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.875rem;
+    }
+    .does-not {
+      padding-left: 1.25rem;
+      position: relative;
+    }
+    .does-not::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: #1a1a1a;
+      font-size: 1.1rem;
+    }
+    .budget-note {
+      font-size: 0.8rem;
+      color: #777;
+      margin-top: 0.75rem;
+      font-style: italic;
+    }
+    .clip-arrow {
+      font-size: 1.25rem;
+      color: #bbb;
+      padding-bottom: 1.2rem;
+    }
+    .amendment-reveal cite {
+      display: block;
+      font-style: normal;
+      font-size: 0.8rem;
+      color: #777;
+      margin-top: 0.5rem;
+    }
     .side-quest {
       border-left: 3px solid #ccc;
       margin: 1.5rem 0;
@@ -97,15 +251,15 @@
 <body>
 
   <header>
-    <p class="series-label"><a href="../index.html" style="color:#777; text-decoration:none;">Too Louse Rock</a> — Episode 1</p>
-    <h1>What Is HJR 173/174 and Why Should Anyone Who Cares About Public Education Pay Attention?</h1>
+    <p class="series-label"><a href="../index.html" style="color:#777; text-decoration:none;">TLR</a> — Episode 1</p>
+    <h1>What Is Amendment 5 and Why Should Anyone Who Cares About Public Education Pay Attention?</h1>
   </header>
 
   <div class="video-placeholder">
     Video coming soon.
   </div>
 
-  <p>There is a constitutional amendment moving through the Missouri legislature right now. In August when it goes on your ballot, if you vote yes, it becomes part of the Missouri Constitution. The amendment is called HJR 173/174. Here is what it does: it sets Missouri on a path to eliminate the state individual income tax completely.</p>
+  <p>There is a constitutional amendment headed to Missouri's August 2026 ballot called <a href="https://ballotpedia.org/Missouri_Income_Tax_Elimination_and_Sales_Tax_Changes_Amendment_(2026)" target="_blank">Amendment 5</a>. If Missouri voters approve it, it becomes part of the Missouri Constitution. The measure began in the legislature as <a href="https://house.mo.gov/Bill.aspx?bill=HJR+173" target="_blank">House Joint Resolutions 173 and 174 (HJR 173/174)</a>. Here is what it would do: set Missouri on a path to eliminate the state individual income tax completely.</p>
 
   <h2>That Sounds Good. What's the Catch?</h2>
 
@@ -117,9 +271,9 @@
 
   <p>Because eliminating a tax does not eliminate the public costs that tax currently pays for.</p>
 
-  <p>HJR 173/174 changes where the money — in this case public education money — comes from, or whether the money shows up at all.</p>
+  <p>Amendment 5 changes where the money — in this case public education money — comes from, or whether the money shows up at all.</p>
 
-  <p>On the surface HJR 173/174 may sound like merely a tax policy question. In Missouri, that also makes it a public education question.</p>
+  <p>On the surface Amendment 5 may sound like merely a tax policy question. In Missouri, that also makes it a public education question.</p>
 
   <h2>How Missouri Pays for Public Schools</h2>
 
@@ -129,31 +283,141 @@
 
   <p>The state formula is supposed to be the equalizer. It is the systemic mechanism that is supposed to keep a child in a poor rural district or a low-income urban neighborhood from receiving a fundamentally different education than a child in a wealthy suburb.</p>
 
-  <p>In Missouri, the state income tax is the primary source of money that funds that educational formula.</p>
+  <p>In Missouri, the state income tax is the primary source of money that funds that educational formula. <a href="https://budplan.oa.mo.gov/budget-information/fy2027/executive-budget" target="_blank">See the FY2027 Executive Budget.</a></p>
 
   <h2>What the Amendment Says</h2>
 
-  <p>In plain language, HJR 173/174 would change the Missouri Constitution to create a pathway for eliminating the state individual income tax over time.</p>
+  <div class="amendment-grid">
+    <div class="amendment-card" onclick="toggleReveal('r1')">
+      <div class="amendment-icon">✕</div>
+      <p>Eliminates state income tax</p>
+    </div>
+    <div class="amendment-card" onclick="toggleReveal('r2')">
+      <div class="amendment-icon">↑</div>
+      <p>Expands sales &amp; transaction taxes</p>
+    </div>
+    <div class="amendment-card" onclick="toggleReveal('r3')">
+      <div class="amendment-icon">⟶</div>
+      <p>Phases out over time, not all at once</p>
+    </div>
+    <div class="amendment-card" onclick="toggleReveal('r4')">
+      <div class="amendment-icon">?</div>
+      <p>Legislature fills in the details later</p>
+    </div>
+    <div class="amendment-reveal" id="r1">
+      "Phase-out the individual income tax based on revenue growth."
+      <cite>— Official ballot language, Missouri Secretary of State, Amendment 5 (2026) · <a href="https://www.sos.mo.gov/petitions/2026ballotmeasures" target="_blank">sos.mo.gov</a></cite>
+    </div>
+    <div class="amendment-reveal" id="r2">
+      "State and local sales and use taxes (or any similar transaction-based tax) may be expanded by legislation to impose taxes on transactions involving any goods and services."
+      <cite>— Amendment 5 text, as reported by <a href="https://www.kctv5.com/2026/05/23/missouri-amendment-5-would-eliminate-income-tax-heres-what-ballot-language-leaves-out/" target="_blank">KCTV5</a></cite>
+    </div>
+    <div class="amendment-reveal" id="r3">
+      "Require any increase in sales tax rates or expansion of the sales tax base be offset by a reduction in the income tax rate."
+      <cite>— Official fair ballot language, Missouri Secretary of State, Amendment 5 (2026) · <a href="https://www.sos.mo.gov/petitions/2026ballotmeasures" target="_blank">sos.mo.gov</a></cite>
+    </div>
+    <div class="amendment-reveal" id="r4">
+      The amendment does not specify which services will be taxed, what rates will apply, or require a public vote on those decisions. Lawmakers may expand sales taxes within a five-year window without returning to voters.
+      <cite>— <a href="https://www.kctv5.com/2026/05/23/missouri-amendment-5-would-eliminate-income-tax-heres-what-ballot-language-leaves-out/" target="_blank">KCTV5: What the ballot language leaves out</a></cite>
+    </div>
+  </div>
 
-  <p>To make that possible, it authorizes lawmakers to expand sales and other transaction-based taxes instead.</p>
-
-  <p>It also ties parts of that phaseout process to future revenue growth, meaning the transition would not happen all at once.</p>
-
-  <p>In other words: the amendment creates the framework. The legislature would still decide many of the operational details later.</p>
+  <p>The amendment creates the framework. The legislature would still decide many of the operational details later.</p>
 
   <h2>What the Amendment Does Not Say</h2>
 
-  <p>The amendment does not include a detailed replacement tax plan.</p>
+  <p class="does-not">The amendment does not include a detailed replacement tax plan.</p>
 
   <p>For example, if Missouri currently funds such a large percentage of its public schools through income taxes, how can those schools be sure they can pay their teachers in a few years in a competitive teacher market?</p>
 
-  <p>It does not list which goods or services would be taxed. If Missouri expands taxes on "services," does that mean your haircut? Your plumber? Your mechanic? The amendment does not say which services will be taxed. Additionally, the amendment does not ask voters to approve that future list — those decisions would be made later by the Missouri legislature in Jefferson City.</p>
+  <div class="clip-strip">
+    <div class="clip-item">
+      <span class="clip-icon">🏫</span>
+      <span class="clip-label">public school</span>
+    </div>
+    <div class="clip-arrow">→</div>
+    <div class="clip-item">
+      <span class="clip-icon">💰</span>
+      <span class="clip-label">state funding</span>
+    </div>
+    <div class="clip-arrow">→</div>
+    <div class="clip-item">
+      <span class="clip-icon">👩‍🏫</span>
+      <span class="clip-label">teacher salary</span>
+    </div>
+    <div class="clip-arrow">→</div>
+    <div class="clip-item">
+      <span class="clip-icon">⚖️</span>
+      <span class="clip-label">competitive market</span>
+    </div>
+  </div>
 
-  <p>It does not specify final tax rates. If the state shifts from taxing income to taxing transactions, what rates would replace that revenue? The amendment does not say.</p>
+  <p class="does-not">It does not list which goods or services would be taxed. If Missouri expands taxes on "services," does that mean:</p>
+  <ul>
+    <li>Your haircut?</li>
+  </ul>
+  <p>The amendment does not say which services will be taxed. Additionally, the amendment does not ask voters to approve that future list — those decisions would be made later by the Missouri legislature in Jefferson City.</p>
 
-  <p>It does not explain exactly how lost state revenue would be replaced. Fox C-6 expected roughly $142 million in operating revenue for the 2025–2026 school year. School districts make real commitments based on those projections. If state funding becomes unstable during a tax transition, what fills that gap? The amendment does not say.</p>
+  <div class="budget-chart">
+    <h3>Typical Missouri household — monthly spending on services currently exempt from sales tax</h3>
+    <div class="budget-row">
+      <div class="budget-step">1.</div>
+      <div class="budget-label"><a href="https://daycarecalc.com/state-costs/missouri" target="_blank">Child care</a></div>
+      <div class="budget-bar-wrap"><div class="budget-bar" style="width:100%"></div></div>
+      <div class="budget-amount">$900</div>
+    </div>
+    <div class="budget-row">
+      <div class="budget-step">2.</div>
+      <div class="budget-label"><a href="https://www.bls.gov/news.release/cesan.nr0.htm" target="_blank">Lawn care</a></div>
+      <div class="budget-bar-wrap"><div class="budget-bar" style="width:11%"></div></div>
+      <div class="budget-amount">$100</div>
+    </div>
+    <div class="budget-row">
+      <div class="budget-step">3.</div>
+      <div class="budget-label"><a href="https://www.bls.gov/news.release/cesan.nr0.htm" target="_blank">Auto repair</a></div>
+      <div class="budget-bar-wrap"><div class="budget-bar" style="width:9%"></div></div>
+      <div class="budget-amount">$82</div>
+    </div>
+    <div class="budget-row">
+      <div class="budget-step">4.</div>
+      <div class="budget-label"><a href="https://www.bls.gov/news.release/cesan.nr0.htm" target="_blank">Haircut / salon</a></div>
+      <div class="budget-bar-wrap"><div class="budget-bar" style="width:4%"></div></div>
+      <div class="budget-amount">$35</div>
+    </div>
+    <div class="budget-total">
+      <span>Monthly total</span>
+      <span>$1,117</span>
+    </div>
+    <p class="budget-note">Amendment 5 does not specify which services will be taxed or at what rate. Missouri's current state sales tax rate is 4.225%. Any new tax on services would be applied on top of these costs. Child care figure: Missouri 2026 statewide average. Auto repair, lawn care, and personal care figures: U.S. Bureau of Labor Statistics Consumer Expenditure Survey, 2024.</p>
+  </div>
 
-  <h2>What This Means for Schools That Are Already Behind</h2>
+  <p class="does-not">It does not specify final tax rates. If the state shifts from taxing income to taxing transactions, what rates would replace that revenue? The amendment does not say.</p>
+
+  <div class="clip-strip" style="gap: 3rem;">
+    <div class="clip-item" style="flex-direction: row; align-items: center;">
+      <span class="clip-icon">🔧</span>
+      <span style="font-size: 2rem; color: #aaa; line-height: 1;">?</span>
+    </div>
+    <div class="clip-item" style="flex-direction: row; align-items: center;">
+      <span class="clip-icon">✂️</span>
+      <span style="font-size: 2rem; color: #aaa; line-height: 1;">?</span>
+    </div>
+    <div class="clip-item" style="flex-direction: row; align-items: center;">
+      <span class="clip-icon">👶</span>
+      <span style="font-size: 2rem; color: #aaa; line-height: 1;">?</span>
+    </div>
+  </div>
+
+  <p class="does-not">It does not explain exactly how lost state revenue would be replaced. <a href="https://www.myleaderpaper.com/news/fox-c-6-school-district-2025-2026-budget-approved/article_ea711985-e5bf-4c82-9632-cc47aa058bf8.html" target="_blank">Fox C-6 expected roughly $142 million in operating revenue for the 2025–2026 school year.</a> School districts make real commitments based on those projections. If state funding becomes unstable during a tax transition, what fills that gap?</p>
+
+  <div style="text-align: center; margin: 1.5rem 0;">
+    <img src="../assets/gap-clip-art.png" alt="A figure leaping over a gap — representing the funding gap left by Amendment 5" style="max-width: 180px; height: auto; display: block; margin: 0 auto 0.4rem;">
+    <span style="font-size: 0.75rem; color: #aaa; letter-spacing: 0.05em;">TLR</span>
+  </div>
+
+  <p>The amendment does not say.</p>
+
+  <h2>What This Means for Schools That Are Already Struggling to Meet Students' Needs</h2>
 
   <p>The foundation formula is supposed to protect districts that cannot generate enough local revenue. <a href="https://stillunequal.org/funding/" target="_blank">Research from Forward Through Ferguson documents how funding inequities in Missouri continue to fall along racial and economic lines.</a> When the state's share shrinks, wealthy districts absorb the loss from their local property tax base. Poor districts do not have that cushion.</p>
 
@@ -163,6 +427,7 @@
     <h2>Sources</h2>
     <ul>
       <li><a href="https://dese.mo.gov/media/pdf/missouri-school-funding-formula" target="_blank">DESE: Missouri School Funding Formula (PDF)</a></li>
+      <li><a href="https://budplan.oa.mo.gov/budget-information/fy2027/executive-budget" target="_blank">Missouri Office of Administration: FY2027 Executive Budget</a></li>
       <li><a href="https://dese.mo.gov/financial-admin-services/school-finance" target="_blank">DESE: School Finance</a></li>
       <li><a href="https://mostpolicyinitiative.org/science-note/education-funding-sources/" target="_blank">MOST Policy Initiative: Education Funding Sources</a></li>
       <li><a href="https://missouriindependent.com/2025/06/23/missouri-school-funding-task-force-turns-its-attention-to-property-tax-inequities/" target="_blank">Missouri Independent: School funding task force turns to property tax inequities</a></li>
@@ -170,15 +435,30 @@
       <li><a href="https://missouriindependent.com/2026/04/23/missouri-senate-rejects-increase-to-school-funding-despite-shortfall-in-state-payments/" target="_blank">Missouri Independent: Senate rejects increase to school funding</a></li>
       <li><a href="https://www.stlpr.org/education/2026-05-07/missouri-school-officials-worried-about-tight-budgets-without-a-fully-funded-education-formula" target="_blank">STL Public Radio: School officials worried about tight budgets</a></li>
       <li><a href="https://stillunequal.org/funding/" target="_blank">Still Separate, Still Unequal — Forward Through Ferguson</a></li>
+      <li><a href="https://www.myleaderpaper.com/news/fox-c-6-school-district-2025-2026-budget-approved/article_ea711985-e5bf-4c82-9632-cc47aa058bf8.html" target="_blank">My Leader: Fox C-6 approves 2025–2026 budget</a></li>
       <li><a href="https://www.kcur.org/politics-elections-and-government/2025-05-15/missouri-sick-leave-law-repeal-minimum-wage" target="_blank">KCUR: Missouri legislature repeals sick leave law voters approved</a></li>
       <li><a href="https://missouriindependent.com/2025/08/29/missouri-voters-expanded-paid-sick-leave-the-gop-undid-it-and-the-repeal-just-took-effect/" target="_blank">Missouri Independent: Sick leave repeal took effect August 2025</a></li>
       <li><a href="https://governor.mo.gov/press-releases/archive/governor-kehoe-places-four-constitutional-amendments-august-primary-election" target="_blank">Governor Kehoe: Four constitutional amendments placed on August ballot</a></li>
+      <li><a href="https://www.kctv5.com/2026/05/23/missouri-amendment-5-would-eliminate-income-tax-heres-what-ballot-language-leaves-out/" target="_blank">KCTV5: Missouri Amendment 5 would eliminate the income tax — what the ballot language leaves out</a></li>
     </ul>
   </div>
 
   <footer>
-    <p>Too Louse Rock is an independent research series. All sources are publicly available. These are facts you can verify yourself.</p>
+    <p>TLR is an independent research series. All sources are publicly available. These are facts you can verify yourself.</p>
   </footer>
+
+  <script>
+    function toggleReveal(id) {
+      const reveals = document.querySelectorAll('.amendment-reveal');
+      reveals.forEach(r => {
+        if (r.id === id) {
+          r.classList.toggle('open');
+        } else {
+          r.classList.remove('open');
+        }
+      });
+    }
+  </script>
 
 </body>
 </html>
