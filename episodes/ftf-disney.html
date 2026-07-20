@@ -3,37 +3,26 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>First Things First: The Disney World Trip</title>
+<title>FTF Disney — Background Reference</title>
 <style>
-  :root {
-    --bg:       #FAFAF8;
-    --card:     #FFFFFF;
-    --text:     #1C1C1A;
-    --muted:    #6B6B68;
-    --accent:   #7A6952;
-    --border:   rgba(0,0,0,0.10);
-    --rule:     rgba(0,0,0,0.08);
-    --link:     #4A72A0;
-    --link-vis: #6A5280;
-  }
-
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
 
   body {
-    background: var(--bg);
-    color: var(--text);
+    background: #111111;
+    color: #ccccca;
     font-family: Georgia, 'Times New Roman', serif;
     font-size: 17px;
-    line-height: 1.7;
+    line-height: 1.75;
     padding: 0 0 80px;
   }
 
+  /* ── Chapter nav ── */
   .ep-nav {
-    border-bottom: 1px solid var(--border);
+    border-bottom: 1px solid #2a2a2a;
     padding: 0 24px;
     position: sticky;
     top: 0;
-    background: var(--bg);
+    background: #111111;
     z-index: 10;
   }
 
@@ -41,7 +30,6 @@
     max-width: 740px;
     margin: 0 auto;
     display: flex;
-    gap: 0;
     overflow-x: auto;
     scrollbar-width: none;
   }
@@ -51,144 +39,132 @@
     display: inline-block;
     padding: 12px 16px;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
-    font-size: 12.5px;
+    font-size: 12px;
     font-weight: 500;
-    color: var(--muted);
+    color: #666;
     text-decoration: none;
     border-bottom: 2px solid transparent;
     white-space: nowrap;
-    transition: color 0.15s, border-color 0.15s;
-    letter-spacing: 0.01em;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
   }
-  .ep-nav a:hover { color: var(--text); }
-  .ep-nav a.active { color: var(--text); border-bottom-color: var(--accent); }
-  .ep-nav a.coming { color: var(--border); cursor: default; pointer-events: none; }
+  .ep-nav a.active { color: #ccccca; border-bottom-color: #555; }
+  .ep-nav a.coming { color: #333; cursor: default; pointer-events: none; }
 
+  /* ── Wrapper ── */
   .ep-wrap {
     max-width: 740px;
     margin: 0 auto;
     padding: 0 24px;
   }
 
-  .ep-series {
-    padding-top: 48px;
+  /* ── Header ── */
+  .ep-label {
+    padding-top: 40px;
     padding-bottom: 4px;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
-    font-size: 11.5px;
+    font-size: 11px;
     font-weight: 600;
-    letter-spacing: 0.09em;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: var(--accent);
+    color: #555;
   }
 
   .ep-title {
-    font-size: 32px;
+    font-size: 28px;
     font-weight: normal;
-    line-height: 1.2;
-    letter-spacing: -0.3px;
-    margin-top: 8px;
-    margin-bottom: 6px;
-  }
-
-  .ep-subtitle {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
-    font-size: 14px;
-    color: var(--muted);
+    line-height: 1.25;
+    color: #e0e0dc;
+    margin-top: 6px;
     margin-bottom: 32px;
   }
 
   hr.ep-rule {
     border: none;
-    border-top: 1px solid var(--rule);
-    margin: 32px 0;
-  }
-
-  /* Photo slot styles — available for article chapters */
-  .photo-slot {
-    width: 100%;
-    background: var(--card);
-    border: 1px dashed var(--border);
-    border-radius: 4px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--muted);
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
-    font-size: 12px;
-    letter-spacing: 0.04em;
+    border-top: 1px solid #222;
     margin: 28px 0;
   }
-  .photo-slot.wide   { aspect-ratio: 16/7; }
-  .photo-slot.square { aspect-ratio: 4/3;  width: 55%; }
-  .photo-slot.tall   { aspect-ratio: 3/4;  width: 40%; float: right; margin-left: 24px; }
-  .photo-slot img    { width: 100%; height: 100%; object-fit: cover; border-radius: 3px; display: block; }
 
-  .photo-caption {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
-    font-size: 12px;
-    color: var(--muted);
-    margin-top: -20px;
-    margin-bottom: 28px;
-    font-style: italic;
-  }
-
+  /* ── Body ── */
   .ep-body p { margin-bottom: 1.4em; }
 
   .ep-body h2 {
-    font-size: 20px;
-    font-weight: normal;
-    letter-spacing: -0.2px;
-    margin: 40px 0 12px;
-    border-bottom: 1px solid var(--rule);
-    padding-bottom: 8px;
+    font-size: 13px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #888;
+    margin: 36px 0 10px;
   }
 
   .ep-body a {
-    color: var(--link);
+    color: #7aabdc;
     text-decoration: underline;
     text-decoration-thickness: 1px;
     text-underline-offset: 2px;
   }
-  .ep-body a:visited { color: var(--link-vis); }
-  .ep-body a:hover { text-decoration-thickness: 2px; }
-  .ep-body strong { font-weight: 700; }
+  .ep-body a:visited { color: #a088cc; }
+  .ep-body strong { color: #e0e0dc; font-weight: 600; }
 
-  .ep-fact {
-    border-left: 3px solid var(--accent);
-    padding: 4px 0 4px 18px;
-    margin: 28px 0;
-    color: var(--muted);
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
-    font-size: 14.5px;
-    line-height: 1.55;
+  /* ── Callout ── */
+  .ep-note {
+    border-left: 2px solid #333;
+    padding: 2px 0 2px 16px;
+    margin: 24px 0;
+    color: #999;
+    font-size: 15px;
+    line-height: 1.6;
   }
 
+  /* ── References ── */
   .ep-refs {
-    margin-top: 48px;
-    padding-top: 24px;
-    border-top: 1px solid var(--rule);
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #222;
   }
 
   .ep-refs h2 {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
-    font-size: 11.5px;
+    font-size: 11px;
     font-weight: 600;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: var(--muted);
-    margin-bottom: 14px;
+    color: #555;
+    margin-bottom: 12px;
   }
 
   .ep-refs ol {
     padding-left: 20px;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
     font-size: 13px;
-    color: var(--muted);
+    color: #777;
     line-height: 1.6;
   }
   .ep-refs ol li { margin-bottom: 6px; }
-  .ep-refs a { color: var(--link); }
+  .ep-refs a { color: #7aabdc; }
 
+  /* ── Photo slots (available for article chapters) ── */
+  .photo-slot {
+    width: 100%;
+    background: #1a1a1a;
+    border: 1px dashed #333;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #555;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+    font-size: 12px;
+    margin: 24px 0;
+  }
+  .photo-slot.wide   { aspect-ratio: 16/7; }
+  .photo-slot.square { aspect-ratio: 4/3; width: 55%; }
+  .photo-slot.tall   { aspect-ratio: 3/4; width: 40%; float: right; margin-left: 24px; }
+  .photo-slot img    { width: 100%; height: 100%; object-fit: cover; border-radius: 2px; display: block; }
+  .photo-caption     { font-size: 12px; color: #555; margin-top: -16px; margin-bottom: 24px; font-style: italic; }
+
+  /* ── Chapters ── */
   .chapter { display: none; }
   .chapter.active { display: block; }
   .ep-body::after { content: ''; display: table; clear: both; }
@@ -196,16 +172,16 @@
   footer {
     margin-top: 3rem;
     padding-top: 1rem;
-    border-top: 1px solid var(--rule);
+    border-top: 1px solid #222;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
-    font-size: 0.85rem;
-    color: var(--muted);
+    font-size: 0.8rem;
+    color: #444;
   }
 
   @media (max-width: 560px) {
     body { font-size: 16px; }
     .ep-wrap { padding: 0 16px; }
-    .ep-title { font-size: 26px; }
+    .ep-title { font-size: 22px; }
     .photo-slot.square,
     .photo-slot.tall { width: 100%; float: none; margin-left: 0; aspect-ratio: 4/3; }
   }
@@ -215,7 +191,7 @@
 
 <nav class="ep-nav" aria-label="Article chapters">
   <div class="ep-nav-inner">
-    <a href="#" class="active" onclick="showChapter('ch1', this); return false;">The Foundation</a>
+    <a href="#" class="active" onclick="showChapter('ch1', this); return false;">Background</a>
     <a href="#" class="coming" aria-disabled="true">Chapter 2 — coming</a>
     <a href="#" class="coming" aria-disabled="true">Chapter 3 — coming</a>
   </div>
@@ -225,46 +201,39 @@
 
   <article class="chapter active" id="ch1">
 
-    <p class="ep-series">Too Louse Rock · Disney World Series</p>
+    <p class="ep-label">TLR · Disney World Series · Background Reference</p>
     <h1 class="ep-title">First Things First: The Disney World Trip</h1>
-    <p class="ep-subtitle">The Kurt Warner Foundation, Make-A-Wish, and twenty-four years of a very particular kind of gift</p>
 
     <hr class="ep-rule">
 
     <div class="ep-body">
 
-      <p>The <strong><a href="https://www.kurtwarner.org/" target="_blank" rel="noopener">Kurt Warner First Things First Foundation</a></strong> is a Christian non-profit founded in May 2001 by NFL Hall of Fame quarterback <a href="https://en.wikipedia.org/wiki/Kurt_Warner" target="_blank" rel="noopener">Kurt Warner</a> and his wife, Brenda Warner. Its longest-running program is an annual, all-expenses-paid trip to Walt Disney World for children with life-threatening illnesses — a program now in its 24th year and one the Warners make in partnership with <a href="https://wish.org/" target="_blank" rel="noopener">Make-A-Wish</a>, the <a href="https://www.dreamfactorykids.org/" target="_blank" rel="noopener">Dream Factory</a>, and <a href="https://www.gktw.org/" target="_blank" rel="noopener">Give Kids the World</a>.</p>
+      <p>The <strong><a href="https://www.kurtwarner.org/" target="_blank" rel="noopener">Kurt Warner First Things First Foundation</a></strong> is a Christian non-profit founded in May 2001 by NFL Hall of Fame quarterback <a href="https://en.wikipedia.org/wiki/Kurt_Warner" target="_blank" rel="noopener">Kurt Warner</a> and his wife, Brenda Warner. Its longest-running program is an annual, all-expenses-paid trip to Walt Disney World for children with life-threatening illnesses. The program is in its 24th year and runs in partnership with <a href="https://wish.org/" target="_blank" rel="noopener">Make-A-Wish</a>, the <a href="https://www.dreamfactorykids.org/" target="_blank" rel="noopener">Dream Factory</a>, and <a href="https://www.gktw.org/" target="_blank" rel="noopener">Give Kids the World</a>.</p>
 
       <h2>The name</h2>
 
-      <p>The foundation takes its name from a postgame interview. After the St. Louis Rams won <a href="https://en.wikipedia.org/wiki/Super_Bowl_XXXIV" target="_blank" rel="noopener">Super Bowl XXXIV</a> in January 2000 — with Warner named the game's Most Valuable Player — he opened his remarks by thanking his faith "first." The foundation was established the following year as a 501(c)(3) public charity, directing its work toward families and children facing illness, disability, and hardship in communities connected to the Warners: Arizona, Missouri, Illinois, and Iowa.</p>
+      <p>After the St. Louis Rams won <a href="https://en.wikipedia.org/wiki/Super_Bowl_XXXIV" target="_blank" rel="noopener">Super Bowl XXXIV</a> in January 2000 — with Warner named the game's MVP — he opened his postgame remarks by thanking his faith "first." The foundation was established the following year as a 501(c)(3) public charity. It serves families and children facing illness, disability, and hardship in communities connected to the Warners: Arizona, Missouri, Illinois, and Iowa.</p>
 
-      <div class="ep-fact">
-        The foundation's focus on pediatric disability is rooted in the Warners' own experience. Their eldest son, Zachary, sustained a traumatic brain injury as an infant, resulting in cognitive and visual disabilities — an experience the Warners have cited repeatedly as foundational to the causes they support.
+      <div class="ep-note">
+        The Warners' eldest son, Zachary, sustained a traumatic brain injury as an infant, resulting in cognitive and visual disabilities. The Warners have cited this experience repeatedly as foundational to the causes the foundation supports.
       </div>
 
       <h2>The Disney World program</h2>
 
-      <p>Beginning in 2002, one year after the foundation launched, First Things First started hosting families of critically ill children on week-long, fully funded vacations to Walt Disney World in Orlando. The trips cover the Magic Kingdom, Epcot, Disney's Animal Kingdom, and Disney's Hollywood Studios. Families stay at <a href="https://www.gktw.org/" target="_blank" rel="noopener">Give Kids the World Village</a>, a resort built specifically to host children with critical illnesses and their families.</p>
+      <p>Beginning in 2002, First Things First began hosting families of critically ill children on week-long, fully funded vacations to Walt Disney World in Orlando, covering Magic Kingdom, Epcot, Disney's Animal Kingdom, and Disney's Hollywood Studios. Families stay at <a href="https://www.gktw.org/" target="_blank" rel="noopener">Give Kids the World Village</a>, a resort built specifically for children with critical illnesses and their families.</p>
 
       <p>As of 2026, the program has hosted approximately 193 wish and dream children and their families. Kurt, Brenda, and their now-adult children accompany the families personally during the trips.</p>
 
-      <h2>The Make-A-Wish partnership</h2>
+      <h2>Partnership structure</h2>
 
-      <p>Families are drawn primarily from the rolls of <a href="https://wish.org/" target="_blank" rel="noopener">Make-A-Wish</a> and the <a href="https://www.dreamfactorykids.org/" target="_blank" rel="noopener">Dream Factory</a> — organizations that grant experiences to children with critical and life-threatening conditions. First Things First doesn't operate as a wish-granting body itself. It functions as a hosting and funding partner: it identifies and sponsors qualifying families and underwrites the full cost of their travel, lodging, and park experiences.</p>
+      <p>Families are drawn from the rolls of <a href="https://wish.org/" target="_blank" rel="noopener">Make-A-Wish</a> and the <a href="https://www.dreamfactorykids.org/" target="_blank" rel="noopener">Dream Factory</a>. First Things First does not operate as a wish-granting organization. It functions as a hosting and funding partner: it identifies and sponsors qualifying families and underwrites the full cost of travel, lodging, and park access.</p>
 
-      <p>Make-A-Wish and similar organizations maintain the medical eligibility criteria and family relationships. First Things First provides the sponsored trip as a recurring, branded program. Twenty-plus years of the same collaboration distinguishes this from a one-time charitable gift.</p>
-
-      <h2>Why it matters here</h2>
-
-      <p>The model the foundation uses — a founder-led family foundation amplifying a larger national organization by absorbing the cost and logistics of a specific, repeatable experience — shows up throughout the disability and inclusion landscape. For the Warners, the program reflects a personal throughline: a family shaped by the long-term care of a child with disabilities extending that concern to other families navigating serious pediatric illness.</p>
-
-      <p>For Missouri communities in particular, where the foundation's roots run deep through the Rams years, the program represents something more specific: the translation of public visibility into sustained, private action over more than two decades.</p>
+      <p>Make-A-Wish and Dream Factory maintain the medical eligibility criteria and family relationships. First Things First provides the sponsored trip as a recurring, branded program.</p>
 
     </div>
 
     <div class="ep-refs">
-      <h2>References</h2>
+      <h2>Sources</h2>
       <ol>
         <li>"We're Going to Disney World!" <em>Kurt Warner First Things First Foundation.</em> <a href="https://www.kurtwarner.org/disney" target="_blank" rel="noopener">kurtwarner.org/disney</a></li>
         <li>"Home." <em>Kurt Warner First Things First Foundation.</em> <a href="https://www.kurtwarner.org/" target="_blank" rel="noopener">kurtwarner.org</a></li>
