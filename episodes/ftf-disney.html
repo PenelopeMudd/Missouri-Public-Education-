@@ -28,7 +28,6 @@
     padding: 0 0 80px;
   }
 
-  /* ── Chapter nav ── */
   .ep-nav {
     border-bottom: 1px solid var(--border);
     padding: 0 24px;
@@ -65,14 +64,12 @@
   .ep-nav a.active { color: var(--text); border-bottom-color: var(--accent); }
   .ep-nav a.coming { color: var(--border); cursor: default; pointer-events: none; }
 
-  /* ── Article wrapper ── */
   .ep-wrap {
     max-width: 740px;
     margin: 0 auto;
     padding: 0 24px;
   }
 
-  /* ── Series header ── */
   .ep-series {
     padding-top: 48px;
     padding-bottom: 4px;
@@ -106,7 +103,7 @@
     margin: 32px 0;
   }
 
-  /* ── Photo slots ── */
+  /* Photo slot styles — available for article chapters */
   .photo-slot {
     width: 100%;
     background: var(--card);
@@ -121,7 +118,6 @@
     letter-spacing: 0.04em;
     margin: 28px 0;
   }
-
   .photo-slot.wide   { aspect-ratio: 16/7; }
   .photo-slot.square { aspect-ratio: 4/3;  width: 55%; }
   .photo-slot.tall   { aspect-ratio: 3/4;  width: 40%; float: right; margin-left: 24px; }
@@ -136,10 +132,7 @@
     font-style: italic;
   }
 
-  /* ── Body text ── */
-  .ep-body p {
-    margin-bottom: 1.4em;
-  }
+  .ep-body p { margin-bottom: 1.4em; }
 
   .ep-body h2 {
     font-size: 20px;
@@ -158,10 +151,8 @@
   }
   .ep-body a:visited { color: var(--link-vis); }
   .ep-body a:hover { text-decoration-thickness: 2px; }
-
   .ep-body strong { font-weight: 700; }
 
-  /* ── Pull fact ── */
   .ep-fact {
     border-left: 3px solid var(--accent);
     padding: 4px 0 4px 18px;
@@ -172,7 +163,6 @@
     line-height: 1.55;
   }
 
-  /* ── References ── */
   .ep-refs {
     margin-top: 48px;
     padding-top: 24px;
@@ -196,18 +186,13 @@
     color: var(--muted);
     line-height: 1.6;
   }
-
   .ep-refs ol li { margin-bottom: 6px; }
   .ep-refs a { color: var(--link); }
 
-  /* ── Chapter sections ── */
   .chapter { display: none; }
   .chapter.active { display: block; }
-
-  /* clearfix for floated photos */
   .ep-body::after { content: ''; display: table; clear: both; }
 
-  /* ── Footer ── */
   footer {
     margin-top: 3rem;
     padding-top: 1rem;
@@ -228,7 +213,6 @@
 </head>
 <body>
 
-<!-- Chapter nav -->
 <nav class="ep-nav" aria-label="Article chapters">
   <div class="ep-nav-inner">
     <a href="#" class="active" onclick="showChapter('ch1', this); return false;">The Foundation</a>
@@ -239,7 +223,6 @@
 
 <div class="ep-wrap">
 
-  <!-- ══ CHAPTER 1: The Foundation ══ -->
   <article class="chapter active" id="ch1">
 
     <p class="ep-series">Too Louse Rock · Disney World Series</p>
@@ -247,11 +230,6 @@
     <p class="ep-subtitle">The Kurt Warner Foundation, Make-A-Wish, and twenty-four years of a very particular kind of gift</p>
 
     <hr class="ep-rule">
-
-    <!-- Photo slot 1 — wide lead image -->
-    <div class="photo-slot wide" id="photo-1-1">
-      <span>[ Photo 1 ]</span>
-    </div>
 
     <div class="ep-body">
 
@@ -263,11 +241,6 @@
 
       <div class="ep-fact">
         The foundation's focus on pediatric disability is rooted in the Warners' own experience. Their eldest son, Zachary, sustained a traumatic brain injury as an infant, resulting in cognitive and visual disabilities — an experience the Warners have cited repeatedly as foundational to the causes they support.
-      </div>
-
-      <!-- Photo slot 2 -->
-      <div class="photo-slot square" id="photo-1-2">
-        <span>[ Photo 2 ]</span>
       </div>
 
       <h2>The Disney World program</h2>
@@ -282,18 +255,13 @@
 
       <p>Make-A-Wish and similar organizations maintain the medical eligibility criteria and family relationships. First Things First provides the sponsored trip as a recurring, branded program. Twenty-plus years of the same collaboration distinguishes this from a one-time charitable gift.</p>
 
-      <!-- Photo slot 3 -->
-      <div class="photo-slot wide" id="photo-1-3">
-        <span>[ Photo 3 ]</span>
-      </div>
-
       <h2>Why it matters here</h2>
 
       <p>The model the foundation uses — a founder-led family foundation amplifying a larger national organization by absorbing the cost and logistics of a specific, repeatable experience — shows up throughout the disability and inclusion landscape. For the Warners, the program reflects a personal throughline: a family shaped by the long-term care of a child with disabilities extending that concern to other families navigating serious pediatric illness.</p>
 
       <p>For Missouri communities in particular, where the foundation's roots run deep through the Rams years, the program represents something more specific: the translation of public visibility into sustained, private action over more than two decades.</p>
 
-    </div><!-- /ep-body -->
+    </div>
 
     <div class="ep-refs">
       <h2>References</h2>
@@ -307,9 +275,8 @@
     <footer>TLR is an independent research series. All sources are publicly available.</footer>
 
   </article>
-  <!-- /ch1 -->
 
-</div><!-- /ep-wrap -->
+</div>
 
 <script>
 function showChapter(id, el) {
