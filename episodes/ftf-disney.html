@@ -16,7 +16,6 @@
     padding: 0 0 80px;
   }
 
-  /* ── Chapter nav ── */
   .ep-nav {
     border-bottom: 1px solid #2a2a2a;
     padding: 0 24px;
@@ -51,14 +50,12 @@
   .ep-nav a.active { color: #ccccca; border-bottom-color: #555; }
   .ep-nav a.coming { color: #333; cursor: default; pointer-events: none; }
 
-  /* ── Wrapper ── */
   .ep-wrap {
     max-width: 740px;
     margin: 0 auto;
     padding: 0 24px;
   }
 
-  /* ── Header ── */
   .ep-label {
     padding-top: 40px;
     padding-bottom: 4px;
@@ -85,7 +82,6 @@
     margin: 28px 0;
   }
 
-  /* ── Body ── */
   .ep-body p { margin-bottom: 1.4em; }
 
   .ep-body h2 {
@@ -107,7 +103,6 @@
   .ep-body a:visited { color: #a088cc; }
   .ep-body strong { color: #e0e0dc; font-weight: 600; }
 
-  /* ── Callout ── */
   .ep-note {
     border-left: 2px solid #333;
     padding: 2px 0 2px 16px;
@@ -117,7 +112,26 @@
     line-height: 1.6;
   }
 
-  /* ── References ── */
+  /* Photo slot styles — available for article chapters */
+  .photo-slot {
+    width: 100%;
+    background: #1a1a1a;
+    border: 1px dashed #333;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #555;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+    font-size: 12px;
+    margin: 24px 0;
+  }
+  .photo-slot.wide   { aspect-ratio: 16/7; }
+  .photo-slot.square { aspect-ratio: 4/3; width: 55%; }
+  .photo-slot.tall   { aspect-ratio: 3/4; width: 40%; float: right; margin-left: 24px; }
+  .photo-slot img    { width: 100%; height: 100%; object-fit: cover; border-radius: 2px; display: block; }
+  .photo-caption     { font-size: 12px; color: #555; margin-top: -16px; margin-bottom: 24px; font-style: italic; }
+
   .ep-refs {
     margin-top: 40px;
     padding-top: 20px;
@@ -144,27 +158,6 @@
   .ep-refs ol li { margin-bottom: 6px; }
   .ep-refs a { color: #7aabdc; }
 
-  /* ── Photo slots (available for article chapters) ── */
-  .photo-slot {
-    width: 100%;
-    background: #1a1a1a;
-    border: 1px dashed #333;
-    border-radius: 3px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #555;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
-    font-size: 12px;
-    margin: 24px 0;
-  }
-  .photo-slot.wide   { aspect-ratio: 16/7; }
-  .photo-slot.square { aspect-ratio: 4/3; width: 55%; }
-  .photo-slot.tall   { aspect-ratio: 3/4; width: 40%; float: right; margin-left: 24px; }
-  .photo-slot img    { width: 100%; height: 100%; object-fit: cover; border-radius: 2px; display: block; }
-  .photo-caption     { font-size: 12px; color: #555; margin-top: -16px; margin-bottom: 24px; font-style: italic; }
-
-  /* ── Chapters ── */
   .chapter { display: none; }
   .chapter.active { display: block; }
   .ep-body::after { content: ''; display: table; clear: both; }
@@ -208,27 +201,27 @@
 
     <div class="ep-body">
 
-      <p>The <strong><a href="https://www.kurtwarner.org/" target="_blank" rel="noopener">Kurt Warner First Things First Foundation</a></strong> is a Christian non-profit founded in May 2001 by NFL Hall of Fame quarterback <a href="https://en.wikipedia.org/wiki/Kurt_Warner" target="_blank" rel="noopener">Kurt Warner</a> and his wife, Brenda Warner. Its longest-running program is an annual, all-expenses-paid trip to Walt Disney World for children with life-threatening illnesses. The program is in its 24th year and runs in partnership with <a href="https://wish.org/" target="_blank" rel="noopener">Make-A-Wish</a>, the <a href="https://www.dreamfactorykids.org/" target="_blank" rel="noopener">Dream Factory</a>, and <a href="https://www.gktw.org/" target="_blank" rel="noopener">Give Kids the World</a>.</p>
+      <p>The <strong><a href="https://www.kurtwarner.org/" target="_blank" rel="noopener">Kurt Warner First Things First Foundation</a></strong> is a Christian non-profit founded in May 2001 by NFL Hall of Fame quarterback <a href="https://en.wikipedia.org/wiki/Kurt_Warner" target="_blank" rel="noopener">Kurt Warner</a> and his wife, Brenda Warner. Its longest-running program is an annual, all-expenses-paid trip to Walt Disney World for children with life-threatening illnesses — a program now in its 24th year and one the Warners make in partnership with <a href="https://wish.org/" target="_blank" rel="noopener">Make-A-Wish</a>, the <a href="https://www.dreamfactorykids.org/" target="_blank" rel="noopener">Dream Factory</a>, and <a href="https://www.gktw.org/" target="_blank" rel="noopener">Give Kids the World</a>.</p>
 
       <h2>The name</h2>
 
-      <p>After the St. Louis Rams won <a href="https://en.wikipedia.org/wiki/Super_Bowl_XXXIV" target="_blank" rel="noopener">Super Bowl XXXIV</a> in January 2000 — with Warner named the game's MVP — he opened his postgame remarks by thanking his faith "first." The foundation was established the following year as a 501(c)(3) public charity. It serves families and children facing illness, disability, and hardship in communities connected to the Warners: Arizona, Missouri, Illinois, and Iowa.</p>
+      <p>The foundation takes its name from a postgame interview. After the St. Louis Rams won <a href="https://en.wikipedia.org/wiki/Super_Bowl_XXXIV" target="_blank" rel="noopener">Super Bowl XXXIV</a> in January 2000 — with Warner named the game's Most Valuable Player — he opened his remarks by thanking his faith "first." The foundation was established the following year as a 501(c)(3) public charity, directing its work toward families and children facing illness, disability, and hardship in communities connected to the Warners: Arizona, Missouri, Illinois, and Iowa.</p>
 
       <div class="ep-note">
-        The Warners' eldest son, Zachary, sustained a traumatic brain injury as an infant, resulting in cognitive and visual disabilities. The Warners have cited this experience repeatedly as foundational to the causes the foundation supports.
+        The foundation's focus on pediatric disability is rooted in the Warners' own experience. Their eldest son, Zachary, sustained a traumatic brain injury as an infant, resulting in cognitive and visual disabilities — an experience the Warners have cited repeatedly as foundational to the causes they support.
       </div>
 
       <h2>The Disney World program</h2>
 
-      <p>Beginning in 2002, First Things First began hosting families of critically ill children on week-long, fully funded vacations to Walt Disney World in Orlando, covering Magic Kingdom, Epcot, Disney's Animal Kingdom, and Disney's Hollywood Studios. Families stay at <a href="https://www.gktw.org/" target="_blank" rel="noopener">Give Kids the World Village</a>, a resort built specifically for children with critical illnesses and their families.</p>
+      <p>Beginning in 2002, one year after the foundation launched, First Things First started hosting families of critically ill children on week-long, fully funded vacations to Walt Disney World in Orlando. The trips cover the Magic Kingdom, Epcot, Disney's Animal Kingdom, and Disney's Hollywood Studios. Families stay at <a href="https://www.gktw.org/" target="_blank" rel="noopener">Give Kids the World Village</a>, a resort built specifically to host children with critical illnesses and their families.</p>
 
       <p>As of 2026, the program has hosted approximately 193 wish and dream children and their families. Kurt, Brenda, and their now-adult children accompany the families personally during the trips.</p>
 
-      <h2>Partnership structure</h2>
+      <h2>The Make-A-Wish partnership</h2>
 
-      <p>Families are drawn from the rolls of <a href="https://wish.org/" target="_blank" rel="noopener">Make-A-Wish</a> and the <a href="https://www.dreamfactorykids.org/" target="_blank" rel="noopener">Dream Factory</a>. First Things First does not operate as a wish-granting organization. It functions as a hosting and funding partner: it identifies and sponsors qualifying families and underwrites the full cost of travel, lodging, and park access.</p>
+      <p>Families are drawn primarily from the rolls of <a href="https://wish.org/" target="_blank" rel="noopener">Make-A-Wish</a> and the <a href="https://www.dreamfactorykids.org/" target="_blank" rel="noopener">Dream Factory</a> — organizations that grant experiences to children with critical and life-threatening conditions. First Things First doesn't operate as a wish-granting body itself. It functions as a hosting and funding partner: it identifies and sponsors qualifying families and underwrites the full cost of their travel, lodging, and park experiences.</p>
 
-      <p>Make-A-Wish and Dream Factory maintain the medical eligibility criteria and family relationships. First Things First provides the sponsored trip as a recurring, branded program.</p>
+      <p>Make-A-Wish and similar organizations maintain the medical eligibility criteria and family relationships. First Things First provides the sponsored trip as a recurring, branded program. Twenty-plus years of the same collaboration distinguishes this from a one-time charitable gift.</p>
 
     </div>
 
